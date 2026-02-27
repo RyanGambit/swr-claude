@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       headers["anthropic-beta"] = "web-search-2025-03-05";
     }
 
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+    const response = await fetch("/api/claude", {
       method: "POST",
       headers,
       body: JSON.stringify(body),
